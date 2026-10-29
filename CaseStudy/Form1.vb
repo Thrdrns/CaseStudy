@@ -117,8 +117,6 @@ Public Class Form1
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim f2 As New Form2()
-        Me.Hide()
-        f2.Show()
+
     End Sub
 End Class
