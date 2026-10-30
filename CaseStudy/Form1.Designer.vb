@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Label13 = New Label()
         btnAdd = New Button()
         btnSearch = New Button()
         btnUpdate = New Button()
@@ -56,7 +57,6 @@ Partial Class Form1
         Label1 = New Label()
         DataGridView1 = New DataGridView()
         Panel4 = New Panel()
-        Label13 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -66,12 +66,25 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.PaleTurquoise
         Panel1.Controls.Add(Label13)
         Panel1.Location = New Point(-5, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(760, 49)
+        Panel1.Size = New Size(828, 49)
         Panel1.TabIndex = 0
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.BackColor = Color.PaleTurquoise
+        Label13.Font = New Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(56, 5)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(333, 38)
+        Label13.TabIndex = 0
+        Label13.Text = "Bayview Suites Hotel"
         ' 
         ' btnAdd
         ' 
@@ -92,7 +105,7 @@ Partial Class Form1
         btnSearch.FlatStyle = FlatStyle.Flat
         btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = SystemColors.ButtonHighlight
-        btnSearch.Location = New Point(159, 8)
+        btnSearch.Location = New Point(172, 8)
         btnSearch.Name = "btnSearch"
         btnSearch.Size = New Size(116, 36)
         btnSearch.TabIndex = 2
@@ -105,7 +118,7 @@ Partial Class Form1
         btnUpdate.FlatStyle = FlatStyle.Flat
         btnUpdate.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpdate.ForeColor = SystemColors.ButtonHighlight
-        btnUpdate.Location = New Point(309, 8)
+        btnUpdate.Location = New Point(342, 8)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(116, 36)
         btnUpdate.TabIndex = 3
@@ -118,7 +131,7 @@ Partial Class Form1
         btnDelete.FlatStyle = FlatStyle.Flat
         btnDelete.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = SystemColors.ButtonHighlight
-        btnDelete.Location = New Point(461, 8)
+        btnDelete.Location = New Point(516, 8)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(116, 36)
         btnDelete.TabIndex = 4
@@ -127,6 +140,7 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
+        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel2.BackColor = SystemColors.ActiveCaption
         Panel2.Controls.Add(Label7)
         Panel2.Controls.Add(Label8)
@@ -142,7 +156,7 @@ Partial Class Form1
         Panel2.Controls.Add(lblViewID)
         Panel2.Location = New Point(488, 63)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(254, 274)
+        Panel2.Size = New Size(322, 274)
         Panel2.TabIndex = 5
         ' 
         ' Label7
@@ -259,7 +273,7 @@ Partial Class Form1
         btnClear.FlatStyle = FlatStyle.Flat
         btnClear.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClear.ForeColor = SystemColors.ButtonHighlight
-        btnClear.Location = New Point(611, 8)
+        btnClear.Location = New Point(681, 8)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(116, 36)
         btnClear.TabIndex = 5
@@ -408,16 +422,19 @@ Partial Class Form1
         ' 
         ' DataGridView1
         ' 
+        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView1.BackgroundColor = SystemColors.ActiveCaption
         DataGridView1.BorderStyle = BorderStyle.Fixed3D
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(12, 403)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(730, 219)
+        DataGridView1.Size = New Size(800, 219)
         DataGridView1.TabIndex = 14
         ' 
         ' Panel4
         ' 
+        Panel4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel4.BackColor = SystemColors.ControlDarkDark
         Panel4.Controls.Add(btnClear)
         Panel4.Controls.Add(btnAdd)
@@ -426,27 +443,15 @@ Partial Class Form1
         Panel4.Controls.Add(btnUpdate)
         Panel4.Location = New Point(12, 343)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(730, 54)
+        Panel4.Size = New Size(800, 54)
         Panel4.TabIndex = 15
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.BackColor = Color.PaleTurquoise
-        Label13.Font = New Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.ForeColor = Color.Black
-        Label13.Location = New Point(56, 5)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(333, 38)
-        Label13.TabIndex = 0
-        Label13.Text = "Bayview Suites Hotel"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(754, 634)
+        ClientSize = New Size(824, 634)
         Controls.Add(Panel4)
         Controls.Add(DataGridView1)
         Controls.Add(Panel3)

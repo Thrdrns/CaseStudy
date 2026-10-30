@@ -114,6 +114,12 @@ Public Class Form1
         txtPhone.Clear()
         txtPreferences.Clear()
         txtFirstName.Focus()
+        lblViewID.Text = ""
+        lblViewFirstName.Text = ""
+        lblViewLastName.Text = ""
+        lblViewEmail.Text = ""
+        lblViewPhone.Text = ""
+        lblViewPreferences.Text = ""
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -139,7 +145,6 @@ Public Class Form1
                             lblViewPhone.Text = reader("Phone").ToString()
                             lblViewPreferences.Text = reader("Preferences").ToString()
                         Else
-                            ResetDisplay()
                             MessageBox.Show("No guest found with ID " & id & ".")
                         End If
                     End Using
@@ -149,12 +154,5 @@ Public Class Form1
             MessageBox.Show("Error searching guest: " & ex.Message)
         End Try
     End Sub
-    Private Sub ResetDisplay()
-        lblViewID.Text = "GuestID"
-        lblViewFirstName.Text = "FirstName"
-        lblViewLastName.Text = "LastName"
-        lblViewEmail.Text = "Email"
-        lblViewPhone.Text = "Phone"
-        lblViewPreferences.Text = "Preferences"
-    End Sub
+
 End Class
