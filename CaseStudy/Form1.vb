@@ -117,6 +117,44 @@ Public Class Form1
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim id As Integer
+        If Not Integer.TryParse(txtGuestID.Text.Trim(), id) Then
+            MessageBox.Show("Please enter a valid numeric GuestID.")
+            txtGuestID.Focus()
+            Exit Sub
+        End If
 
+        Try
+            Using conn As New MySqlConnection(connStr)
+                conn.Open()
+                Dim sql As String = "SELECT * FROM Guest WHERE GuestID = @id"
+                Using cmd As New MySqlCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("@id", id)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            lblViewID.Text = reader("GuestID").ToString()
+                            lblViewFirstName.Text = reader("FirstName").ToString()
+                            lblViewLastName.Text = reader("LastName").ToString()
+                            lblViewEmail.Text = reader("Email").ToString()
+                            lblViewPhone.Text = reader("Phone").ToString()
+                            lblViewPreferences.Text = reader("Preferences").ToString()
+                        Else
+                            ResetDisplay()
+                            MessageBox.Show("No guest found with ID " & id & ".")
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error searching guest: " & ex.Message)
+        End Try
+    End Sub
+    Private Sub ResetDisplay()
+        lblViewID.Text = "GuestID"
+        lblViewFirstName.Text = "FirstName"
+        lblViewLastName.Text = "LastName"
+        lblViewEmail.Text = "Email"
+        lblViewPhone.Text = "Phone"
+        lblViewPreferences.Text = "Preferences"
     End Sub
 End Class

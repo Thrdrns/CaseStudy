@@ -28,6 +28,18 @@ Partial Class Form1
         btnUpdate = New Button()
         btnDelete = New Button()
         Panel2 = New Panel()
+        Label7 = New Label()
+        Label8 = New Label()
+        Label9 = New Label()
+        Label10 = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        lblViewPreferences = New Label()
+        lblViewPhone = New Label()
+        lblViewEmail = New Label()
+        lblViewLastName = New Label()
+        lblViewFirstName = New Label()
+        lblViewID = New Label()
         btnClear = New Button()
         txtEmail = New RichTextBox()
         txtLastName = New RichTextBox()
@@ -44,12 +56,8 @@ Partial Class Form1
         Label1 = New Label()
         DataGridView1 = New DataGridView()
         Panel4 = New Panel()
-        Label7 = New Label()
-        Label8 = New Label()
-        Label9 = New Label()
-        Label10 = New Label()
-        Label11 = New Label()
-        Label12 = New Label()
+        Label13 = New Label()
+        Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -59,9 +67,10 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = Color.PaleTurquoise
-        Panel1.Location = New Point(1, 0)
+        Panel1.Controls.Add(Label13)
+        Panel1.Location = New Point(-5, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(686, 49)
+        Panel1.Size = New Size(760, 49)
         Panel1.TabIndex = 0
         ' 
         ' btnAdd
@@ -83,7 +92,7 @@ Partial Class Form1
         btnSearch.FlatStyle = FlatStyle.Flat
         btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = SystemColors.ButtonHighlight
-        btnSearch.Location = New Point(138, 8)
+        btnSearch.Location = New Point(159, 8)
         btnSearch.Name = "btnSearch"
         btnSearch.Size = New Size(116, 36)
         btnSearch.TabIndex = 2
@@ -96,7 +105,7 @@ Partial Class Form1
         btnUpdate.FlatStyle = FlatStyle.Flat
         btnUpdate.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpdate.ForeColor = SystemColors.ButtonHighlight
-        btnUpdate.Location = New Point(275, 8)
+        btnUpdate.Location = New Point(309, 8)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(116, 36)
         btnUpdate.TabIndex = 3
@@ -109,7 +118,7 @@ Partial Class Form1
         btnDelete.FlatStyle = FlatStyle.Flat
         btnDelete.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = SystemColors.ButtonHighlight
-        btnDelete.Location = New Point(411, 8)
+        btnDelete.Location = New Point(461, 8)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(116, 36)
         btnDelete.TabIndex = 4
@@ -118,17 +127,131 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = SystemColors.ActiveBorder
-        Panel2.Controls.Add(Label12)
-        Panel2.Controls.Add(Label11)
-        Panel2.Controls.Add(Label10)
-        Panel2.Controls.Add(Label9)
-        Panel2.Controls.Add(Label8)
+        Panel2.BackColor = SystemColors.ActiveCaption
         Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Label8)
+        Panel2.Controls.Add(Label9)
+        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(Label11)
+        Panel2.Controls.Add(Label12)
+        Panel2.Controls.Add(lblViewPreferences)
+        Panel2.Controls.Add(lblViewPhone)
+        Panel2.Controls.Add(lblViewEmail)
+        Panel2.Controls.Add(lblViewLastName)
+        Panel2.Controls.Add(lblViewFirstName)
+        Panel2.Controls.Add(lblViewID)
         Panel2.Location = New Point(488, 63)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(187, 274)
+        Panel2.Size = New Size(254, 274)
         Panel2.TabIndex = 5
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(13, 239)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(78, 15)
+        Label7.TabIndex = 11
+        Label7.Text = "Preferences:"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(13, 196)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(45, 15)
+        Label8.TabIndex = 10
+        Label8.Text = "Phone:"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(13, 154)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(39, 15)
+        Label9.TabIndex = 9
+        Label9.Text = "Email:"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Location = New Point(13, 110)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(65, 15)
+        Label10.TabIndex = 8
+        Label10.Text = "LastName:"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(13, 68)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(67, 15)
+        Label11.TabIndex = 7
+        Label11.Text = "FirstName:"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(13, 26)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(56, 15)
+        Label12.TabIndex = 6
+        Label12.Text = "GuestID:"
+        ' 
+        ' lblViewPreferences
+        ' 
+        lblViewPreferences.AutoSize = True
+        lblViewPreferences.Location = New Point(101, 239)
+        lblViewPreferences.Name = "lblViewPreferences"
+        lblViewPreferences.Size = New Size(0, 15)
+        lblViewPreferences.TabIndex = 5
+        ' 
+        ' lblViewPhone
+        ' 
+        lblViewPhone.AutoSize = True
+        lblViewPhone.Location = New Point(101, 196)
+        lblViewPhone.Name = "lblViewPhone"
+        lblViewPhone.Size = New Size(0, 15)
+        lblViewPhone.TabIndex = 4
+        ' 
+        ' lblViewEmail
+        ' 
+        lblViewEmail.AutoSize = True
+        lblViewEmail.Location = New Point(101, 154)
+        lblViewEmail.Name = "lblViewEmail"
+        lblViewEmail.Size = New Size(0, 15)
+        lblViewEmail.TabIndex = 3
+        ' 
+        ' lblViewLastName
+        ' 
+        lblViewLastName.AutoSize = True
+        lblViewLastName.Location = New Point(101, 110)
+        lblViewLastName.Name = "lblViewLastName"
+        lblViewLastName.Size = New Size(0, 15)
+        lblViewLastName.TabIndex = 2
+        ' 
+        ' lblViewFirstName
+        ' 
+        lblViewFirstName.AutoSize = True
+        lblViewFirstName.Location = New Point(101, 68)
+        lblViewFirstName.Name = "lblViewFirstName"
+        lblViewFirstName.Size = New Size(0, 15)
+        lblViewFirstName.TabIndex = 1
+        ' 
+        ' lblViewID
+        ' 
+        lblViewID.AutoSize = True
+        lblViewID.Location = New Point(101, 26)
+        lblViewID.Name = "lblViewID"
+        lblViewID.Size = New Size(0, 15)
+        lblViewID.TabIndex = 0
         ' 
         ' btnClear
         ' 
@@ -136,7 +259,7 @@ Partial Class Form1
         btnClear.FlatStyle = FlatStyle.Flat
         btnClear.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClear.ForeColor = SystemColors.ButtonHighlight
-        btnClear.Location = New Point(545, 8)
+        btnClear.Location = New Point(611, 8)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(116, 36)
         btnClear.TabIndex = 5
@@ -290,7 +413,7 @@ Partial Class Form1
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(12, 403)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(664, 219)
+        DataGridView1.Size = New Size(730, 219)
         DataGridView1.TabIndex = 14
         ' 
         ' Panel4
@@ -303,69 +426,27 @@ Partial Class Form1
         Panel4.Controls.Add(btnUpdate)
         Panel4.Location = New Point(12, 343)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(664, 54)
+        Panel4.Size = New Size(730, 54)
         Panel4.TabIndex = 15
         ' 
-        ' Label7
+        ' Label13
         ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(10, 32)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(48, 15)
-        Label7.TabIndex = 0
-        Label7.Text = "GuestID"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(10, 74)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(61, 15)
-        Label8.TabIndex = 1
-        Label8.Text = "FirstName"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(10, 116)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(60, 15)
-        Label9.TabIndex = 2
-        Label9.Text = "LastName"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Location = New Point(10, 160)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(36, 15)
-        Label10.TabIndex = 3
-        Label10.Text = "Email"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Location = New Point(10, 202)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(41, 15)
-        Label11.TabIndex = 4
-        Label11.Text = "Phone"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(10, 245)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(68, 15)
-        Label12.TabIndex = 5
-        Label12.Text = "Preferences"
+        Label13.AutoSize = True
+        Label13.BackColor = Color.PaleTurquoise
+        Label13.Font = New Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(56, 5)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(333, 38)
+        Label13.TabIndex = 0
+        Label13.Text = "Bayview Suites Hotel"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(685, 634)
+        ClientSize = New Size(754, 634)
         Controls.Add(Panel4)
         Controls.Add(DataGridView1)
         Controls.Add(Panel3)
@@ -373,6 +454,8 @@ Partial Class Form1
         Controls.Add(Panel1)
         Name = "Form1"
         Text = "Bayview Suites Hotel"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
@@ -404,11 +487,18 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lblViewPreferences As Label
+    Friend WithEvents lblViewPhone As Label
+    Friend WithEvents lblViewEmail As Label
+    Friend WithEvents lblViewLastName As Label
+    Friend WithEvents lblViewFirstName As Label
+    Friend WithEvents lblViewID As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 
 End Class
